@@ -1,0 +1,47 @@
+
+
+<ion-content [fullscreen]="true">
+
+
+        <ion-card>        
+          <ion-card-content>
+                  <div class="mb-3">
+                    <label class="form-label">Nomor Induk Siswa</label>
+                    <div class="border-left border-bottom border-right">
+                      <ion-input clearInput [(ngModel)]="nim" value="clear me"></ion-input>
+                    </div>
+                    <div id="emailHelp" class="form-text"><i>Silahkan masukan dengan format, ex: 112233 </i></div>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Nama Lengkap Siswa</label>
+                    <div class="border-left border-bottom border-right">
+                      <ion-input clearInput [(ngModel)]="nama" value="clear me"></ion-input>
+                    </div>
+                    <div id="emailHelp" class="form-text"><i>Nama lengkap jangan disingkat</i></div>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">prodi</label>
+                    <div class="border-left border-bottom border-right">
+                      <ion-input clearInput [(ngModel)]="prodi" value="clear me"></ion-input>
+                    </div>
+                    <div id="emailHelp" class="form-text"><i>Silahkan masukan dengan format, ex: X-TKJ-2</i></div>
+                  </div>
+                 
+                  <div class="mb-3">
+                    <label class="form-label">Kelas</label>
+                    <div class="border-left border-bottom border-right">
+                      <ion-input clearInput [(ngModel)]="kelas" value="clear me"></ion-input>
+                    </div>
+                    <div id="emailHelp" class="form-text"><i>Silahkan masukan dengan format, ex: X-TKJ-2</i></div>
+                  </div>
+                  <a href="../home">
+                  <button type="submit" (click)="submit()" class="btn btn-primary">Simpan Data</button>
+                  </a>
+         </ion-card-content>
+        </ion-card>
+
+
+
+
+
+</ion-content>

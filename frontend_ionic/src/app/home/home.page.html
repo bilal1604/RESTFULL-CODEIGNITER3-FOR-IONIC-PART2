@@ -1,0 +1,47 @@
+<ion-content>
+  
+  <ion-list-header>
+    DATA TABLE MAHASISWA
+  </ion-list-header>
+
+  
+
+<ion-card>        
+  <ion-card-content>
+
+    <table class="table table-striped">
+      <thead class="table mb-0"> 
+        <tr>
+            <!-- <th>NO</th> -->
+            <th>NIM</th>
+            <th>NAMA</th>
+            <th>PRODI</th>
+            <th>KELAS</th>
+            <th>TOOLS</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let siswa of GETSiswa; let i=index;">
+            <td hidden>{{siswa.id}}</td>
+            <td>{{siswa.nim}}</td>
+            <td>{{siswa.nama}}</td>
+            <td>{{siswa.prodi}}</td>
+            <td>{{siswa.kelas}}</td>
+            <td>
+              <div class="item">
+                <ion-icon name="create" style="zoom: 5.0;" [routerLink]="['/update/{{siswa.id}}']"></ion-icon>
+                <ion-icon name="trash" style="zoom: 5.0;"(click)="deletedata(siswa.nim)"></ion-icon>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+    
+    
+      <ion-icon class="add" [routerLink]="['/add']" name="add-circle-sharp"></ion-icon>
+  
+      </ion-card-content>
+</ion-card>
+
+
+</ion-content>
